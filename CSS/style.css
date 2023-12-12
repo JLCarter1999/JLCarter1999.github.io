@@ -463,7 +463,7 @@ textarea:focus~label, textarea:valid~label{
    Show the link that contains should open and close the topnav (.icon) 
 */
 @media screen and (max-width: 850px){
-    .navbar a:not(:first-child) {display: none;}
+    .navbar a {display: none;}
     .navbar a.icon {
         float: right;
         display: block;
