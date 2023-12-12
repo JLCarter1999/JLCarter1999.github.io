@@ -399,6 +399,39 @@ textarea:focus~label, textarea:valid~label{
     font-size: 14px;
 }
 
+/* Styling for ContactFormSubmit */
+
+.backtohome-h1{
+    margin: 25px;
+    text-align: center;
+}
+
+.backtohome-p{
+    margin: 25px;
+    text-align: center;
+}
+
+.backtohome{
+    padding: 10px 0;
+    color: #0ef;
+    outline: none;
+    background: transparent;
+    border: 2px solid #0ef;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.backtohome:hover{
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+
+
 
 /* KEYFRAMES ANIMATIONS */
 @keyframes slideRight{
