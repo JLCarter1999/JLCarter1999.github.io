@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1f242d;
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    position: sticky;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    z-index: 100;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+.navbar a.icon {
+    display: none;
+    font-size: 20px;
+}
+
+/* Styling for the Home page "index.html" */
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0; 
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h1 {
+    font-size: 76px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s; 
+}
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-img img {
+    max-width: 450px;
+    margin-right: -20px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.social-media a:hover {
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* Styling for the About page "about.html" */
+
+.paragraphs{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 75px;
+}
+
+.paragraph{
+    margin: 25px;
+    margin-bottom: 10px;
+}
+
+.paragraph h1{
+    color: #0ef;
+    opacity: 0;
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.paragraph p{
+    opacity: 0;
+    animation: slideLeft 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.resume{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 50px auto;
+    margin-top: 75px;
+}
+
+.resume:hover{
+    color: #0ef;
+    text-decoration: underline; 
+    text-underline-offset: 5px;
+}
+
+.resume h1:hover{
+    text-decoration: inherit;
+    text-underline-offset: inherit;
+}
+
+.resume a{
+    margin-right: 5px;
+}
+.resume a:hover{
+    text-decoration: inherit;
+    text-underline-offset: inherit;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 5px; /* Adjust the spacing between the text and arrow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.resume h1:hover .arrow {
+    text-decoration: none; /* Remove underline on arrow hover */
+}
+
+.resume:hover .arrow {
+    transform: translateX(10px); /* Adjust the distance the arrow moves to the right */
+}
+
+
+
+.container h3{
+    opacity: 0;
+    animation: slideLeft 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.container h4{
+    opacity: 0;
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    color: #0ef; 
+}
+
+/* Styling for the Project page "projects.html" */
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 50px auto;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container:first-of-type {
+    margin-top: 125px; /* Adjust the top margin for the first container */
+}
+
+.container:hover {
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    background: #ffffff8c;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.container:hover h2{
+    color: #0ef; 
+}
+
+.photo {
+    flex: 1;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 8px; /* optional: adds rounded corners to the image */
+    opacity: 0;
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.content {
+    flex: 2;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #fff;
+    opacity: 0;
+    animation: slideBottom 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+a {
+    /* Override default link styles */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent (h2) */
+    cursor: pointer; /* Add pointer cursor on hover */
+    display: inline-block; /* Make the link behave like a block element */
+}
+
+a:active {
+    /* Add active styles if needed */
+    color: inherit; /* Inherit text color from parent (h2) */
+}
+
+p {
+    color: #fff;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.descriptors {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.descriptor {
+    padding: 5px 10px;
+    background-color: #0ef;
+    border-radius: 20px;
+    opacity: 0;
+    animation: slideLeft 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+/* Add a media query for screen sizes less than 700px */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column; /* Change to a column layout */
+    }
+
+    .container img {
+        order: 2; /* Move the image below the title and description */
+        margin-bottom: 10px; /* Add some spacing between the image and the title */
+    }
+
+    .content {
+        order: 1; /* Move the content to the top */
+    }
+}
+
+
+/* Styling for the Contact page "contact.html */
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+}
+.contact-input-group{
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+input,textarea{
+    width:100%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    transition: 0.2s;
+}
+button{
+    padding: 10px 0;
+    color: #0ef;
+    outline: none;
+    background: transparent;
+    border: 2px solid #0ef;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+
+    
+}
+button:hover{
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+input:focus~label, input:valid~label{
+    top:-35px;
+    font-size: 14px;
+}
+
+textarea:focus~label, textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+
+/* KEYFRAMES ANIMATIONS */
+@keyframes slideRight{
+    0%{
+         transform: translateX(-100px);
+         opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+   }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* MEDIA QUERIES */
+
+/* 
+   When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+   Show the link that contains should open and close the topnav (.icon) 
+*/
+@media screen and (max-width: 850px){
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* 
+The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally)
+*/ 
+@media screen and (max-width: 850px){
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: -20px;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
